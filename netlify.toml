@@ -12,9 +12,17 @@
     Access-Control-Max-Age = "86400"
 
 [[redirects]]
-  # Redirect requests to /api/horoscope to the serverless function
-  from = "/api/horoscope"
-  to = "/.netlify/functions/generateHoroscope"
+  # Redirect requests to /api/birthchart to the serverless function
+  from = "/api/birthchart"
+  to = "/.netlify/functions/birthchart"
+  status = 200
+  force = true
+  methods = ["POST", "OPTIONS"]
+
+[[redirects]]
+  # Redirect requests to /api/navamshachart to the serverless function
+  from = "/api/navamshachart"
+  to = "/.netlify/functions/navamshachart"
   status = 200
   force = true
   methods = ["POST", "OPTIONS"]

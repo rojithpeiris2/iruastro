@@ -27,3 +27,11 @@
   force = true
   methods = ["POST", "OPTIONS"]
 
+[[redirects]]
+  # Redirect requests to /api/navamshachart to the serverless function
+  from = "/api/dasha"
+  to = "/.netlify/functions/dasha"
+  status = 200
+  force = true
+  methods = ["POST", "OPTIONS"]
+

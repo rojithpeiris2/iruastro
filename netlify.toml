@@ -3,12 +3,19 @@
   functions = "netlify/functions"
   # Optionally, specify the publish directory if you're building a static site
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    Access-Control-Max-Age = "86400"
+
 [[redirects]]
   # Redirect requests to /api/horoscope to the serverless function
   from = "/api/horoscope"
   to = "/.netlify/functions/generateHoroscope"
   status = 200
   force = true
-  methods = ["POST"]
-  headers = {Access-Control-Allow-Origin = "*"}
+  methods = ["POST", "OPTIONS"]
 

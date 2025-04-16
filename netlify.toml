@@ -1,0 +1,15 @@
+[build]
+  # This points to the directory where your functions are located
+  functions = "netlify/functions"
+  # Optionally, specify the publish directory if you're building a static site
+  publish = "build"
+
+[[redirects]]
+  # Redirect requests to /api/horoscope to the serverless function
+  from = "/api/horoscope"
+  to = "/.netlify/functions/generateHoroscope"
+  status = 200
+  force = true
+  methods = ["POST"]
+  headers = {Access-Control-Allow-Origin = "*"}
+

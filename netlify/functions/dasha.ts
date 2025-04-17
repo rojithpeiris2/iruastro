@@ -95,7 +95,7 @@ const translations = {
             'Ketu': 'කේතු',
             'Venus': 'සිකුරු',
             'Sun': 'රවි',
-            'Moon': 'චන්ද්‍ර',
+            'Moon': 'සදු',
             'Mars': 'කුජ',
             'Rahu': 'රාහු',
             'Jupiter': 'ගුරු',
@@ -282,7 +282,7 @@ export const handler: Handler = async (event) => {
         return {
             statusCode: 200,
             body: JSON.stringify({
-                message: language === 'si' ? 'දශා ගණනය සාර්ථකයි' : 'Dasha periods calculated successfully',
+                message: "Dasha periods calculated successfully",
                 mainDasha: dashaPeriods
             }),
         };

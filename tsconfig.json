@@ -3,12 +3,12 @@
     "target": "es2018",
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./netlify/functions",
+    "rootDir": "./netlify",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["netlify/functions/**/*"],
+  "include": ["netlify/**/*"],
   "exclude": ["node_modules"]
 }

@@ -733,9 +733,7 @@ export const handler: Handler = async (event) => {
             statusCode: 200,
             body: JSON.stringify({
                 message: translations.en.messages.success,
-                yogas,// Including zodiac signs for each planet
-                planetaryPositions,
-                planetaryZodiacSigns
+                yogas
             }),
         };
 

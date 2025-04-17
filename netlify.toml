@@ -43,3 +43,11 @@
   force = true
   methods = ["POST", "OPTIONS"]
 
+[[redirects]]
+  # Redirect requests to /api/transit to the serverless function
+  from = "/api/transit"
+  to = "/.netlify/functions/transit"
+  status = 200
+  force = true
+  methods = ["POST", "OPTIONS"]
+
